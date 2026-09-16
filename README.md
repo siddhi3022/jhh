@@ -4,8 +4,8 @@
 
 This project contains two FastAPI microservices prepared for Git, GitHub, Jenkins and Docker deployment.
 
-- Order Service: port 8001
-- Inventory Service: port 8002
+- Order Service: port 1001 (container port 8001)
+- Inventory Service: port 1002 (container port 8002)
 - Synchronous communication: Order Service to Inventory Service using HTTPX
 - Authentication: JWT
 - Database: SQLite
@@ -36,8 +36,8 @@ docker-compose ps
 
 ## Swagger
 
-- http://127.0.0.1:8001/docs
-- http://127.0.0.1:8002/docs
+- http://127.0.0.1:1001/docs
+- http://127.0.0.1:1002/docs
 
 ## Git / GitHub
 
@@ -51,4 +51,4 @@ git push origin main
 
 GitHub → Jenkins Checkout → Environment → Install Dependencies → Docker Build → Docker Compose Deploy → Final Status
 
-The Jenkins pipeline does not contain a test stage or pytest command.
+The Jenkins pipeline contains no test or pytest stage.

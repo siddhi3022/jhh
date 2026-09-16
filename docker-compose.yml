@@ -5,7 +5,7 @@ services:
       dockerfile: inventory-service/Dockerfile
     container_name: inventory
     ports:
-      - "8002:8002"
+      - "1002:8002"
 
   order-service:
     build:
@@ -13,7 +13,7 @@ services:
       dockerfile: order-service/Dockerfile
     container_name: order
     ports:
-      - "8001:8001"
+      - "1001:8001"
     environment:
       INVENTORY_URL: http://inventory-service:8002
     depends_on:
